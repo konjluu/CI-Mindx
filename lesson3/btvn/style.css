@@ -1,0 +1,10 @@
+.flex {
+    flex-direction: column;
+    
+}
+.center {
+    margin: 0 auto;
+}
+.border {
+    border-radius: 5px;
+}

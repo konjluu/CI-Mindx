@@ -53,10 +53,10 @@ class Login{
         
         const email = this.$emailEle.getInputValue();
         const password = this.$passwordEle.getInputValue();
-        // console.log(email,password);
+
         signInWithEmailAndPassword(auth, email, password)
         .then(user=>{
-            // localStorage.setItem("login",true);
+            localStorage.setItem("login",true);
             const mainScreen = new Main();
             app.setActiveScreen(mainScreen);
         }).catch(error=>{

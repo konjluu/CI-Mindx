@@ -4,7 +4,7 @@ import {
 } from  "https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js";
 import InputGroup from "./inputComponet.js";
 import Register from "./register.js"
-import app from "./index.js";
+import app from "../index.js";
 import Main from "./main.js";
 
 const auth =getAuth();
@@ -56,7 +56,7 @@ class Login{
 
         signInWithEmailAndPassword(auth, email, password)
         .then(user=>{
-            localStorage.setItem("login",true);
+            // localStorage.setItem("login",true);
             const mainScreen = new Main();
             app.setActiveScreen(mainScreen);
         }).catch(error=>{

@@ -7,7 +7,7 @@ import {
 
 import InputGroup from "./inputComponet.js";
 import Login from "./login.js";
-import app from "./index.js";
+import app from "../index.js";
 
 const auth = getAuth();
 

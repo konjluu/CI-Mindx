@@ -1,13 +1,26 @@
 export default class ConversationItem{
-
-    constructor(){
-
+    conversaitonData;
+    conversationItem;
+    constructor(_conversationData){
+        this.conversaitonData=_conversationData;
+        this.conversationItem=document.createElement("div");
+        this.conversationItem.setAttribute(
+            "class",
+            "bg-white py-2 px-4 rounded-full my-4 hover:bg-pink-400 cursor-pointer hover:text-white")
+        // console.log(this.conversaitonData,"from conversationItem");
     }
 
-    render(conversationsContainer){
-        const conversationItem = document.createElement("h1");
-        conversationItem.textContent="Conversation";
+    render(conversationsContent){
+        const conversationName = document.createElement("h2");
+        conversationName.textContent=this.conversaitonData.name;
+        conversationName.setAttribute(
+            "class",
+            "font-bold"
+        )
 
-        conversationsContainer.appendChild(conversationItem);
+
+        this.conversationItem.appendChild(conversationName);
+
+        conversationsContent.appendChild(this.conversationItem);
     }
 }
